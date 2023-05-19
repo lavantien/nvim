@@ -1,2 +1,1 @@
 require("lavantien")
-print("hello")

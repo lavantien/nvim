@@ -15,10 +15,21 @@ return require('packer').startup(function(use)
 		end
 	})
 
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {  }
+        end
+    }
+
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 
 	use('theprimeagen/harpoon')
+
+    use("theprimeagen/refactoring.nvim")
+    use("nvim-treesitter/nvim-treesitter-context")
 
 	use('mbbill/undotree')
 

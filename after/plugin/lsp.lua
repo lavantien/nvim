@@ -3,6 +3,7 @@ local lsp = require('lsp-zero')
 lsp.preset("recommended")
 
 lsp.ensure_installed({
+	'jsonls',
 	'terraformls',
 	'tailwindcss',
 	'rnix',
@@ -12,7 +13,7 @@ lsp.ensure_installed({
 	'marksman',
 	'jdtls',
 	'html',
-	'helmls',
+	'helm_ls',
 	'graphql',
 	'gopls',
 	'dockerls',
@@ -59,3 +60,8 @@ lsp.on_attach(function()
 end)
 
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true
+})
+
