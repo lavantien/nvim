@@ -1,0 +1,2 @@
+require("lavantien")
+print("hello")
