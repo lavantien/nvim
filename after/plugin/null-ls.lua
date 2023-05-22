@@ -16,7 +16,7 @@ local sources = {
 	formatting.yamlfmt,
 	formatting.shfmt,
 	formatting.sqlfmt,
-	formatting.nixfmt,
+	--formatting.nixfmt,
 	formatting.nginx_beautifier,
 	formatting.prettier,
 	formatting.clang_format,
