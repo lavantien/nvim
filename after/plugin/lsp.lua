@@ -64,12 +64,3 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
-
---[=====[
-vim.api.nvim_create_augroup('Config', { clear = true })
-vim.api.nvim_create_autocmd('BufWritePre', {
-    group = 'Config',
-    pattern = '*.*',
-    callback = vim.lsp.buf.formatting_sync,
-})
---]=====]
