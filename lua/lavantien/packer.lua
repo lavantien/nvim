@@ -56,7 +56,9 @@ return require("packer").startup(function(use)
 			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
 
-		use("Exafunction/codeium.vim"),
 		use("jose-elias-alvarez/null-ls.nvim"),
+
+		use("Exafunction/codeium.vim"),
+		use("wakatime/vim-wakatime"),
 	})
 end)
