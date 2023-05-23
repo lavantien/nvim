@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/codeium.vim",
     url = "https://github.com/Exafunction/codeium.vim"
   },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/harpoon",
