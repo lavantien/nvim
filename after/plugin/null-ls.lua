@@ -12,7 +12,7 @@ local sources = {
 	formatting.rustfmt,
 	formatting.autopep8,
 	formatting.zigfmt,
-	formatting.nimpretty,
+	--formatting.nimpretty,
 	formatting.htmlbeautifier,
 	formatting.xmlformat,
 	formatting.stylua,
