@@ -1,12 +1,14 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+lsp.preset({
+	name = "recommended",
+	call_servers = "global",
+	set_lsp_keymaps = true,
+	manage_nvim_cmp = true,
+})
 
 lsp.ensure_installed({
 	"jsonls",
-	"terraformls",
-	"tailwindcss",
-	"rnix",
 	"yamlls",
 	"sqlls",
 	"pyright",
@@ -30,14 +32,7 @@ lsp.ensure_installed({
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
-	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-	["<C-y>"] = cmp.mapping.confirm({ select = true }),
 	["<C-Space>"] = cmp.mapping.complete(),
-})
-
-lsp.set_preferences({
-	--sign_icons = {},
 })
 
 lsp.setup_nvim_cmp({
@@ -45,40 +40,87 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.on_attach(function()
-	local opts = { buffer = bufnr, remap = false }
+	lsp.default_keymaps({ buffer = bufnr })
 
-	vim.keymap.set("n", "gd", function()
-		vim.lsp.buf.definition()
-	end, opts)
-	vim.keymap.set("n", "K", function()
-		vim.lsp.buf.hover()
-	end, opts)
-	vim.keymap.set("n", "<leader>vws", function()
+	local opts = { buffer = bufnr }
+
+	vim.keymap.set("n", "<C-f>", function()
 		vim.lsp.buf.workspace_symbol()
-	end, opts)
-	vim.keymap.set("n", "<leader>vd", function()
-		--vim.lsp.diagnostic.open_float()
-		vim.diagnostic.open_float()
-	end, opts)
-	vim.keymap.set("n", "[d", function()
-		vim.lsp.diagnostic.goto_next()
-	end, opts)
-	vim.keymap.set("n", "]d", function()
-		vim.lsp.diagnostic.goto_prev()
 	end, opts)
 	vim.keymap.set("n", "<leader>a", function()
 		vim.lsp.buf.code_action()
 	end, opts)
-	vim.keymap.set("n", "<C-f>", function()
-		vim.lsp.buf.references()
-	end, opts)
-	vim.keymap.set("n", "<leader>vrn", function()
-		vim.lsp.buf.rename()
-	end, opts)
-	vim.keymap.set("i", "<C-h>", function()
-		vim.lsp.buf.signature_help()
-	end, opts)
 end)
+
+lsp.set_server_config({
+	single_file_support = false,
+	capabilities = {
+		textDocument = {
+			foldingRange = {
+				dynamicRegistration = false,
+				lineFoldingOnly = true,
+			},
+			completion = {
+				completionItem = {
+					snippetSupport = true,
+					resolveSupport = {
+						properties = {
+							"documentation",
+							"detail",
+							"additionalTextEdits",
+						},
+					},
+				},
+			},
+		},
+	},
+})
+
+lsp.format_on_save({
+	format_opts = {
+		async = false,
+		timeout_ms = 10000,
+	},
+	servers = {
+		["ansible-language-server"] = { "yaml.ansible", "yml", "yaml", "cfg" },
+		["asm_lsp"] = { "asm", "nasm", "s", "S" },
+		["bash-language-server"] = { "sh", "bash" },
+		["bufls"] = { "proto" },
+		["clangd"] = { "c", "cpp", "h", "hpp" },
+		["codeql"] = { "ql" },
+		["vscode-css-language-server"] = { "css", "scss" },
+		["docker-compose-langserver"] = { "yaml", "yml" },
+		["docker-langserver"] = { "dockerfile" },
+		["vscode-eslint-language-server"] = { "js", "jsx", "ts", "tsx" },
+		["golangci-lint-langserver"] = { "go", "mod", "work", "sum" },
+		["gopls"] = { "go", "mod", "work", "sum" },
+		["graphql-lsp"] = { "graphql" },
+		["helm_ls"] = { "helm*", "yaml", "yml" },
+		["vscode-html-language-server"] = { "html" },
+		["java-language-server"] = { "java" },
+		["jdtls"] = { "java" },
+		["vscode-json-language-server"] = { "json" },
+		["ltex-ls"] = { "latex" },
+		["lua-language-server"] = { "lua" },
+		["marksman"] = { "md" },
+		["nginx-language-server"] = { "conf" },
+		["nimls"] = { "nim" },
+		["phpactor"] = { "php" },
+		["pyright-langserver"] = { "py" },
+		["rnix-lsp"] = { "toml", "cfg" },
+		["ruby-lsp"] = { "rb" },
+		["rust_analyzer"] = { "rs" },
+		["sql-language-server"] = { "sql" },
+		["svelteserver"] = { "svelte" },
+		["tailwindcss-language-server"] = { "html", "jsx", "tsx" },
+		["terraform-ls"] = { "tf", "tf.module" },
+		["typescript-language-server"] = { "ts", "tsx" },
+		["vim-language-server"] = { "vim" },
+		["vue-language-server"] = { "vue", "ts", "ext" },
+		["yaml-language-server"] = { "yaml", "yml" },
+		["zls"] = { "zig" },
+	},
+})
 
 lsp.setup()
 
