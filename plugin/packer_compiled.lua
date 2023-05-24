@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/harpoon",

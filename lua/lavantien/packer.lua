@@ -36,6 +36,7 @@ return require("packer").startup(function(use)
 	use("mbbill/undotree")
 
 	use("tpope/vim-fugitive")
+	use("lewis6991/gitsigns.nvim")
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -55,11 +56,11 @@ return require("packer").startup(function(use)
 			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
 			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
-
-		use("jose-elias-alvarez/null-ls.nvim"),
-		use("j-hui/fidget.nvim"),
-
-		use("Exafunction/codeium.vim"),
-		use("wakatime/vim-wakatime"),
 	})
+
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("j-hui/fidget.nvim")
+
+	use("Exafunction/codeium.vim")
+	use("wakatime/vim-wakatime")
 end)
