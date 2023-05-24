@@ -76,6 +76,7 @@ return require("packer").startup(function(use)
 
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("j-hui/fidget.nvim")
+	use("laytan/cloak.nvim")
 
 	use("Exafunction/codeium.vim")
 	use("wakatime/vim-wakatime")

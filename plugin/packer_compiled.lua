@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cloak.nvim"] = {
+    loaded = true,
+    path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/cloak.nvim",
+    url = "https://github.com/laytan/cloak.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/lavantien/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
