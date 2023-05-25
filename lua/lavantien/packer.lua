@@ -20,7 +20,8 @@ return require("packer").startup(function(use)
 		requires = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
-			{ -- Optional
+			{
+				-- Optional
 				"williamboman/mason.nvim",
 				run = function()
 					pcall(vim.cmd, "MasonUpdate")
@@ -73,6 +74,7 @@ return require("packer").startup(function(use)
 
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("nvim-treesitter/playground")
+	use("jose-elias-alvarez/null-ls.nvim")
 
 	use("theprimeagen/harpoon")
 
@@ -84,7 +86,6 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")
 
-	use("jose-elias-alvarez/null-ls.nvim")
 	use("j-hui/fidget.nvim")
 
 	use("Exafunction/codeium.vim")
