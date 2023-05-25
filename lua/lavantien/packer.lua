@@ -36,6 +36,12 @@ return require("packer").startup(function(use)
     })
 
     use({
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.x",
+        requires = { { "nvim-lua/plenary.nvim" } },
+    })
+
+    use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()
@@ -45,11 +51,6 @@ return require("packer").startup(function(use)
         end,
     })
 
-    use({
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.x",
-        requires = { { "nvim-lua/plenary.nvim" } },
-    })
 
     use({
         "rose-pine/neovim",
@@ -75,18 +76,14 @@ return require("packer").startup(function(use)
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
     use("nvim-treesitter/playground")
     use("jose-elias-alvarez/null-ls.nvim")
+    use("j-hui/fidget.nvim")
 
     use("theprimeagen/harpoon")
-
     use("theprimeagen/refactoring.nvim")
     use("nvim-treesitter/nvim-treesitter-context")
-
     use("mbbill/undotree")
-
     use("tpope/vim-fugitive")
     use("lewis6991/gitsigns.nvim")
-
-    use("j-hui/fidget.nvim")
 
     use("Exafunction/codeium.vim")
     use("wakatime/vim-wakatime")
