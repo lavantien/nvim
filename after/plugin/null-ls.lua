@@ -5,56 +5,27 @@ local diagnostics = null_ls.builtins.diagnostics
 local actions = null_ls.builtins.code_actions
 
 local sources = {
-    formatting.gofumpt,
-    formatting.goimports_reviser,
-    formatting.dart_format,
-    formatting.rustfmt,
-    formatting.autopep8,
-    formatting.zigfmt,
-    --formatting.nimpretty,
-    formatting.xmlformat,
-    formatting.stylua,
-    formatting.yamlfmt,
-    formatting.shfmt,
-    formatting.sqlfmt,
-    formatting.nixfmt,
-    formatting.nginx_beautifier,
-    formatting.prettier,
-    formatting.clang_format,
-    formatting.markdownlint,
-    formatting.eslint,
+	formatting.dart_format,
+	formatting.zigfmt,
+	--formatting.nimpretty, -- not supported by the LS
+	formatting.nixfmt,
+	formatting.nginx_beautifier,
+	--formatting.clang_format, -- shadowing jdtls
 
-    diagnostics.golangci_lint,
-    diagnostics.protolint,
-    diagnostics.hadolint,
-    diagnostics.yamllint,
-    diagnostics.buf,
-    diagnostics.markdownlint,
-    diagnostics.terraform_validate,
-    diagnostics.ansiblelint,
-    diagnostics.actionlint,
-    diagnostics.dotenv_linter,
-    diagnostics.checkmake,
-    diagnostics.djlint,
-    diagnostics.eslint,
-    diagnostics.flake8,
-    diagnostics.clang_check,
-    diagnostics.codespell,
+	diagnostics.dotenv_linter,
+	diagnostics.checkmake,
+	diagnostics.clang_check,
 
-    actions.gomodifytags,
-    actions.impl,
-    actions.eslint,
-    actions.refactoring,
-    actions.shellcheck,
-    actions.gitsigns,
+	actions.refactoring,
+	actions.gitsigns,
 }
 
 --local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
-    sources = sources,
+	sources = sources,
 
-    --[==[
+	--[==[
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
