@@ -1,0 +1,9 @@
+{
+    "workspace.library": [
+        "/home/lavantien/.local/share/nvim/site/pack/packer/start/neodev.nvim/types/stable",
+        "/home/linuxbrew/.linuxbrew/Cellar/neovim/0.9.0/share/nvim/runtime/lua",
+        "/home/lavantien/.local/share/nvim/site/pack/packer/start/nvim-dap-ui/lua",
+        "/home/lavantien/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}

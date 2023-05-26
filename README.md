@@ -17,3 +17,5 @@
   <https://youtu.be/ryxRpKpM9B4>
 - Null-LS built-in:
   <https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md>
+- Debugging in Neovim: <https://youtu.be/0moS8UHupGc>
+- How to Debug like a Pro: <https://miguelcrespo.co/how-to-debug-like-a-pro-using-neovim>
