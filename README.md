@@ -19,6 +19,7 @@
   <https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md>
 - Debugging in Neovim: <https://youtu.be/0moS8UHupGc>
 - How to Debug like a Pro: <https://miguelcrespo.co/how-to-debug-like-a-pro-using-neovim>
+- Nvim DAP getting started: <https://davelage.com/posts/nvim-dap-getting-started/>
 
 ## Key Bindings
 
