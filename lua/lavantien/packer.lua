@@ -36,6 +36,14 @@ return require("packer").startup(function(use)
     })
 
     use({
+        "mfussenegger/nvim-dap",
+        "jay-babu/mason-nvim-dap.nvim",
+        requires = {
+            "williamboman/mason.nvim",
+        }
+    })
+
+    use({
         "nvim-telescope/telescope.nvim",
         tag = "0.1.x",
         requires = { { "nvim-lua/plenary.nvim" } },
@@ -78,7 +86,7 @@ return require("packer").startup(function(use)
     use("jose-elias-alvarez/null-ls.nvim")
     use("j-hui/fidget.nvim")
 
-    use("theprimeagen/harpoon")
+    --use("theprimeagen/harpoon")
     use("theprimeagen/refactoring.nvim")
     use("nvim-treesitter/nvim-treesitter-context")
     use("mbbill/undotree")

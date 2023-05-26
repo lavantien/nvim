@@ -5,7 +5,6 @@
 - Install `linuxbrew` and then `$ brew install neovim`
 - Make sure to run `$ nvim +checkhealth` to ensure all dependencies are
   installed
-- Make sure to install `null-lsp` built in services
 - `$ nvim +PackerSync` to sync plugins to local machine
 
 ## References
