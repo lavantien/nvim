@@ -12,6 +12,8 @@
 
 - 0 to LSP: <https://youtu.be/w7i4amO_zaE>
 - ThePrimeagen's Neovim Config: <https://github.com/ThePrimeagen/init.lua>
+- Effective Neovim: Instant IDE: <https://youtu.be/stqUbv-5u2s>
+- TJ DeVries's Kickstart.nvim: <https://github.com/nvim-lua/kickstart.nvim>
 - Neovim Null-LS - Hooks For LSP | Format Code On Save:
   <https://youtu.be/ryxRpKpM9B4>
 - Null-LS built-in:
