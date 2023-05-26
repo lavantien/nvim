@@ -38,6 +38,7 @@ return require("packer").startup(function(use)
     use({
         "mfussenegger/nvim-dap",
         "jay-babu/mason-nvim-dap.nvim",
+        'leoluz/nvim-dap-go',
         requires = {
             "williamboman/mason.nvim",
         }

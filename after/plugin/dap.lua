@@ -2,6 +2,7 @@ require("dapui").setup()
 require("neodev").setup({
     library = { plugins = { "nvim-dap-ui" }, types = true },
 })
+require('dap-go').setup()
 
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -19,4 +20,4 @@ vim.keymap.set('n', '<F10>', require 'dap'.step_over)
 vim.keymap.set('n', '<F11>', require 'dap'.step_into)
 vim.keymap.set('n', '<F12>', require 'dap'.step_out)
 vim.keymap.set('n', '<leader>b', require 'dap'.toggle_breakpoint)
-vim.keymap.set('n', '<leader>e', require 'dap'.repl.open)
+vim.keymap.set('n', '<leader>e', require 'dap-go'.debug_test)

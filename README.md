@@ -19,3 +19,9 @@
   <https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md>
 - Debugging in Neovim: <https://youtu.be/0moS8UHupGc>
 - How to Debug like a Pro: <https://miguelcrespo.co/how-to-debug-like-a-pro-using-neovim>
+
+## Key Bindings
+
+- In Neovim Normal Mode, hit `:nmap` to see the list of all bindings
+- To see bindings of a certain key, hit `:nmap <leader>`
+- Or you can just use Telescope to do the deed `<leader>vk`, in this case, holding the space bar and pressing `vk`
