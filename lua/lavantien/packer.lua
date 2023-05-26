@@ -46,9 +46,10 @@ return require("packer").startup(function(use)
 
     use {
         "rcarriga/nvim-dap-ui",
+        'folke/neodev.nvim',
+        'theHamsta/nvim-dap-virtual-text',
         requires = {
             "mfussenegger/nvim-dap",
-            'folke/neodev.nvim',
         }
     }
 
