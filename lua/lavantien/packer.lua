@@ -43,6 +43,14 @@ return require("packer").startup(function(use)
         }
     })
 
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = {
+            "mfussenegger/nvim-dap",
+            'folke/neodev.nvim',
+        }
+    }
+
     use({
         "nvim-telescope/telescope.nvim",
         tag = "0.1.x",
