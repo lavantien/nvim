@@ -5,28 +5,28 @@ local diagnostics = null_ls.builtins.diagnostics
 local actions = null_ls.builtins.code_actions
 
 local sources = {
-    formatting.dart_format,
-    formatting.zigfmt,
-    --formatting.nimpretty, -- not supported by the LS
-    formatting.nixfmt,
-    formatting.nginx_beautifier,
-    --formatting.clang_format, -- shadowing jdtls
-    formatting.prettier,
+	formatting.dart_format,
+	formatting.zigfmt,
+	--formatting.nimpretty, -- not supported by the LS
+	formatting.nixfmt,
+	formatting.nginx_beautifier,
+	--formatting.clang_format, -- shadowing jdtls
+	--formatting.prettier,
 
-    diagnostics.dotenv_linter,
-    diagnostics.checkmake,
-    diagnostics.clang_check,
+	diagnostics.dotenv_linter,
+	diagnostics.checkmake,
+	diagnostics.clang_check,
 
-    actions.refactoring,
-    actions.gitsigns,
+	actions.refactoring,
+	actions.gitsigns,
 }
 
 --local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
-    sources = sources,
+	sources = sources,
 
-    --[==[
+	--[==[
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
