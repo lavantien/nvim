@@ -89,6 +89,11 @@ return require("packer").startup(function(use)
         requires = { "nvim-tree/nvim-web-devicons", opt = true },
     })
 
+    use {
+        'nmac427/guess-indent.nvim',
+        config = function() require('guess-indent').setup {} end,
+    }
+
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
     use("nvim-treesitter/playground")
     use("jose-elias-alvarez/null-ls.nvim")
