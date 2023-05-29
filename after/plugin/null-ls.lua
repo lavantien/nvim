@@ -11,7 +11,7 @@ local sources = {
 	formatting.nixfmt,
 	formatting.nginx_beautifier,
 	--formatting.clang_format, -- shadowing jdtls
-	formatting.prettierd,
+	formatting.prettier,
 
 	diagnostics.dotenv_linter,
 	diagnostics.checkmake,
