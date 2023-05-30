@@ -34,7 +34,6 @@ return require("packer").startup(function(use)
             { "L3MON4D3/LuaSnip" },                  -- Required
         },
     })
-
     use({
         "mfussenegger/nvim-dap",
         "jay-babu/mason-nvim-dap.nvim",
@@ -43,7 +42,6 @@ return require("packer").startup(function(use)
             "williamboman/mason.nvim",
         }
     })
-
     use {
         "rcarriga/nvim-dap-ui",
         'folke/neodev.nvim',
@@ -52,7 +50,6 @@ return require("packer").startup(function(use)
             "mfussenegger/nvim-dap",
         }
     }
-
     use({
         "nvim-telescope/telescope.nvim",
         tag = "0.1.x",
@@ -68,6 +65,12 @@ return require("packer").startup(function(use)
             })
         end,
     })
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
 
     use("folke/tokyonight.nvim")
@@ -75,7 +78,6 @@ return require("packer").startup(function(use)
         "rose-pine/neovim",
         as = "rose-pine",
     })
-
     use({
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
@@ -83,7 +85,6 @@ return require("packer").startup(function(use)
             require("trouble").setup({})
         end,
     })
-
     use({
         "nvim-lualine/lualine.nvim",
         requires = { "nvim-tree/nvim-web-devicons", opt = true },
