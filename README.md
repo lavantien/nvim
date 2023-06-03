@@ -1,3 +1,5 @@
+This project is now moved to the [dotfiles](https://github.com/lavantien/dotfiles), all my configs will be maintained there instead
+
 # Neovim Config
 
 ## Usage
